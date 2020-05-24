@@ -1,0 +1,14 @@
+
+
+    // Module de la boite
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .boite-fixe-centree {
+      width: 100%;
+      max-width: $largeurBoite;
+      margin: 0 auto;
+      background: #fff;
+    }

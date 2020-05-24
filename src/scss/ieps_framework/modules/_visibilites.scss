@@ -1,0 +1,53 @@
+
+
+    // Module des Visibilites
+
+
+  @media (max-width:768px){
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .headline {
+      margin-bottom: 1em;
+    }
+    .head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 10vh;
+      &__m-icones{
+        display: flex;
+        &__a-icon{
+          margin-right: .4rem;
+        }
+        &__a-textHeader{
+          padding: 1rem;
+          text-align: center;
+          font-size: 1rem;
+          line-height: 1.4rem;
+          border-bottom: 1px dotted $couleurPolice;
+        }
+      }
+    }
+    .headSearch{
+      &__m-iconSearch{
+        display: flex;
+          &__a-search{
+            min-width: 200px;
+            height: 25px;
+            outline: none;
+            border: 1px solid #000;
+            padding-left: 5px;
+            }
+            &__a-searchBtn{
+              padding: .44rem;
+              background: #000;
+              cursor: pointer;
+            }
+          }
+        }
+      }

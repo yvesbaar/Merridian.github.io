@@ -1,0 +1,424 @@
+
+  @import 'ieps_framework/variables';
+  @import 'ieps_framework/modules/fonts';
+
+          //  Fichier de surcharge
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: calc(1em * .625);  // IE-9, 10, 11
+    font-family: 'Merriweather', serif;
+    color: $couleurPolice;
+    background-image: url(../images/bg1.jpg);
+    overflow-x: hidden;
+  }
+  h1 a{
+    font-size: 2.5rem;
+    font-family: 'Kaushan Script', cursive;
+    color: $couleurPolice;
+    margin: 0;
+    text-decoration: none;
+  }
+  h2 {
+    font-family: $fontSecondary;
+    color: $couleurTitre;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  figure {
+    margin: 0;
+  }
+
+  footer {
+    background: $couleurFooter;
+    margin-top: 2rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  /*---------- HEADER ----------------------------*/
+
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  &__m-icones{
+    display: flex;
+    &__a-icon{
+      margin-right: .4rem;
+      cursor: pointer;
+    }
+    &__a-textHeader{
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      border-bottom: 1px dotted $couleurPolice;
+    }
+  }
+}
+.headSearch{
+  &__m-iconSearch{
+    display: flex;
+      &__a-search{
+        width: 60px;
+        height: 25px;
+        outline: none;
+        border: 1px solid #000;
+        padding-left: 5px;
+        transition: width 700ms ease-in-out;
+        &:focus{
+          width: 200px;
+          transition: width 400ms ease-in-out;
+          }
+        }
+        &__a-searchBtn{
+          padding: .44rem;
+          background: #000;
+          cursor: pointer;
+        }
+      }
+    }
+
+/*--------------- Articles -------------------------------*/
+
+    .content{
+      &__m-contentImg{
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        &__a-iconImg{
+          display: flex;
+          padding-right: .4rem;
+        }
+          &__a-txt{
+            display: flex;
+            margin: 0;
+          }
+          &__a-imgGirl{
+            width: 100%;
+            height: auto;
+        }
+          &__a-imgText{
+            margin: 0;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            border-bottom: 1px dotted $couleurPolice;
+          }
+          &__a-player{
+            overflow: hidden;
+            outline: none;
+            border: none;
+            margin: 1rem 0 0 0;
+            width: 100%;
+          }
+        }
+      }
+
+    /*Boutons navigations articles -----------------*/
+      .btns{
+      &__m-contentBtns{
+          height: 7vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0 0 0;
+          &__a-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: .5rem;
+            padding: 1rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 3px;
+            background: linear-gradient(to right bottom, $couleurFooter, $couleurPolice );
+            color: #fff;
+            font-family: $fontSecondary;
+            font-size: .7rem;
+            font-weight: bold;
+            cursor: pointer;
+            }
+          }
+        }
+
+/*-------------- Footer -----------------------------------------------*/
+
+    .headTags{
+      font-family: $fontSecondary;
+      color: $couleurTitre;
+      font-size: 1rem;
+        padding: 1rem 0 1rem 0;
+      &__a-txt{
+        font-family: 'Merriweather', serif;
+        font-size: .8rem;
+        color: $couleurPoliceFooter;
+        line-height: 2rem;
+        background: $BackgroundColorFooter;
+      }
+      &__m-list{
+        font-family: 'Merriweather', serif;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+        line-height: 2rem;
+        color: $couleurPoliceFooter;
+        font-size: .8rem;
+      }
+      &__a-recentPost{
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+        line-height: 2rem;
+      }
+      &__a-link{
+        font-family: 'Merriweather', serif;
+        color: $couleurPoliceFooter;
+        line-height: 1.5rem;
+        font-size: .8rem;
+      }
+    }
+    .tagSecondary{
+      font-family: $fontSecondary;
+      color: $couleurTitre;
+      font-size: 1rem;
+      padding: 1rem 0 1rem 0;
+      &__m-list{
+        &__a-tag{
+          font-size: .6rem;
+          color: $couleurPoliceFooter;
+          font-family: 'Merriweather', serif;
+        }
+        &__a-tag1{
+          color: $couleurPoliceFooter;
+          font-size: 2rem;
+          font-family: 'Merriweather', serif;
+        }
+      }
+    }
+    .tagThird{
+      font-family: $fontSecondary;
+      color: $couleurTitre;
+      font-size: 1rem;
+        padding: 1rem 0 1rem 0;
+      &__m-list{
+        color: $couleurPoliceFooter;
+        font-size: .8rem;
+        font-family: 'Merriweather', serif;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+        line-height: 2rem;
+        &__a-text{
+          color: $couleurPoliceFooter;
+          font-size: .8rem;
+          font-family: 'Merriweather', serif;
+          margin: 0;
+          padding-top: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  .copy {
+    font-family: 'Merriweather', serif;
+    color: $couleurPoliceFooter;
+    background: $BackgroundColorFooter;
+    font-size: .7rem;
+    text-align: center;
+    padding: 1rem;
+    z-index: 10;
+  }
+
+//  SECTION ABOUT------------------------------------------------
+
+.fileAriane {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  border-bottom: 1px dotted $couleurPolice;
+  &__a-text1{
+    color: $couleurTitre;
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+.titreAbout {
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.imgAbout {
+  padding: 0 1em;
+&.imgAbout img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.article{
+  &__m-article{
+    &__a-text{
+      font-family: 'Merriweather', serif;
+      color: $couleurPolice;
+      font-size: 1rem;
+      line-height: 1.4em;
+      margin: 0;
+      padding: 1em;
+    }
+    &__a-titre {
+      margin: 0;
+      padding: 1em;
+      font-size: 1.2rem;
+      color: $couleurTitre;
+      font-family: $fontSecondary;
+      letter-spacing: 1px;
+    }
+    &__a-sep{
+        border-bottom: 1px dotted $couleurPolice;
+    }
+  }
+}
+
+//   SECTION CONTACT -------------------------------------------------
+
+.titreContact {
+  margin: 0;
+  padding: 1.5rem;
+  &__a-text1{
+    font-family: 'Merriweather', serif;
+    color: $couleurPolice;
+    font-size: 1rem;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 1em;
+  }
+  &__a-sep{
+      border-bottom: 1px dotted $couleurPolice;
+  }
+}
+
+.imgContact img{
+  width: 100%;
+  height: auto;
+}
+
+.containerForm {
+  padding: 1em;
+  background: $bckgroundColorFormContainer;
+  &__a-form{
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid $couleurPolice;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+  }
+  &__a-btnForm{
+    padding: .6rem;
+    margin-top: 1rem;
+    width: 5rem;
+    border: 1px solid $couleurPolice;
+    border-radius: 3px;
+    outline: none;
+    background: linear-gradient($couleurPolice, $couleurFooter);
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+      background: linear-gradient(to top, #6b6565, #343232);
+    }
+  }
+}
+
+//    SECTION POST---------------------------------------------------------------
+
+.titrePost {
+  margin: 0;
+  padding: 1.5rem;
+  &__m-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__a-img{
+    margin-right: .5rem;
+    }
+    &__a-imgFille{
+      width: 100%;
+      height: auto;
+    }
+    &__a-text1{
+      font-family: 'Merriweather', serif;
+      color: $couleurPolice;
+      font-size: 1rem;
+      line-height: 1.4em;
+      margin: 0;
+      padding: 1em;
+    }
+    &__a-post{
+      display: flex;
+      font-size: .7rem;
+    }
+    &__a-sep{
+        border-bottom: 1px dotted $couleurPolice;
+    }
+  }
+}
+
+.btnPost {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__a-Btns{
+    padding: .4rem 1.5rem;
+    border-radius: 3px;
+    background: linear-gradient(to top, #242222, #706d6d);
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-size: .7rem;
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}
+
+/*----- Related Post ------------------------*/
+
+.relatedPost{
+  margin: 0;
+  padding: 1em;
+  text-align: left;
+  font-size: 1.5rem;
+  &__m-post{
+    padding: 1em;
+    &__a-img{
+      width: 100%;
+      height: auto;
+    }
+    &__a-titlePost{
+      color: $couleurTitre;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1em 0;
+    }
+    &__a-icon{
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding-right: .5rem;
+    }
+    &__a-txtPost{
+      display: flex;
+    }
+  }
+}

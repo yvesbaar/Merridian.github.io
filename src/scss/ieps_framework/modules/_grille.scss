@@ -1,0 +1,64 @@
+
+
+    //  Module de la grille
+
+    //  Le CONTENEUR-----------------
+
+          .grille {
+            display: grid;
+            grid-template-columns: repeat($nombreColonnes, 1fr);
+            &.grille-gouttiere {
+              grid-gap: $grilleGouttiere;
+            }
+          }
+
+    // TOUS LES ITEMS A $nombreColonnes COLONNES PAR DEFAUT ----------------
+
+          .grille > * {
+            grid-column: span $nombreColonnes;
+          }
+
+    //  LES ITEMS ----------------
+
+
+
+    // LES MEDIA QUERRIES --------------
+
+    //  POUR LES ECRANS MEDIUM (600px)
+
+          @media (min-width: 576px){
+            @for $i from 1 through $nombreColonnes {
+              .s#{$i}{
+                grid-column: span $i;
+              }
+              .s-r#{$i}{
+                grid-row: span $i;
+              }
+            }
+          }
+
+    //  POUR LES ECRANS MEDIUM (768px)
+
+          @media (min-width: 768px){
+            @for $i from 1 through $nombreColonnes {
+              .m#{$i}{
+                grid-column: span $i;
+              }
+              .m-r#{$i}{
+                grid-row: span $i;
+              }
+            }
+          }
+
+      //  POUR LES ECRANS LARGES (992px)
+
+          @media (min-width: 992px){
+            @for $i from 1 through $nombreColonnes {
+              .l#{$i}{
+                grid-column: span $i;
+              }
+              .l-r#{$i}{
+                grid-row: span $i;
+              }
+            }
+          }
